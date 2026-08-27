@@ -1,4 +1,4 @@
-# Primeiro DataFrame
+# Primeiro DataFrame (estrutura formada por linhas e colunas - tabela)
 import pandas as pd # pd é apelido
 import matplotlib.pyplot as plt
 
