@@ -1,14 +1,16 @@
 import pandas as pd
 
-notas = pd.Series([7, 8, 6, 9, 7, 5, 8, 7, 10, 6, 8, 9, 7, 5, 6, 8, 7, 
-9, 8, 10])
+salarios = pd.Series([2000, 2100, 2200, 2300, 2400, 2500, 2600, 2700, 
+2800, 20000])
 
-# 1. Calcule a Média, a Mediana e a Moda das notas dos 20 alunos listados.
-print(f"Média: {notas.mean()}")
-print(f"Mediana: {notas.median()}")
-moda = notas.mode()
-print(f"Moda: {moda}")
+# 1. Calcule a Média, a Mediana e a Moda dos salários acima utilizando Panda.
+print(f"Média: {salarios.mean()}")
+print(f"Mediana: {salarios.median()}")
+moda = salarios.mode()
+tamanho = len(salarios)
+tamanho_moda = len(salarios.mode())
 
-# 2. Extraia o valor mínimo e máximo do conjunto usando Pandas.
-print(f"Mínimo: {notas.min()}")
-print(f"Máximo: {notas.max()}")
+if tamanho_moda == tamanho:
+    print("Amodal")
+else:
+    print(f"Moda: {moda}")
